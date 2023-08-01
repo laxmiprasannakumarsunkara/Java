@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="studentmarks" class="com.sathya.assignment1.Marks">
+		<property name="maths" value="80"/>
+		<property name="science" value="80"/>
+		<property name="social" value="80"/>
+	</bean>
+	<bean id="studentschool" class="com.sathya.assignment1.School">
+		<property name="schoolId" value="101"/>
+		<property name="schoolName" value="Vizag International School"/>
+		<property name="schoolLocation" value="Vizag"/>
+	</bean>
+	
+	<bean id="student" class="com.sathya.assignment1.Student">
+		<property name="studentRoll" value="2125"/>
+		<property name="studentName" value="Mr.Prasanna Kumar"/>
+		<property name="studentmarks" ref="studentmarks"/>
+		<property name="studentschool" ref="studentschool"/>
+	</bean>
+
+ </beans>
